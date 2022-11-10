@@ -3,6 +3,12 @@ class Robot:
         self.name = ''
         self.health = 100
         self.active_weapon = ''
-        self.initiate_attack = True
+    
+    def __init__(self, name):
+        self.name = ""
+
+    def attack(self, dinosaur):
+        self.name = ''
+        self.dinosaur = ""
 
 
