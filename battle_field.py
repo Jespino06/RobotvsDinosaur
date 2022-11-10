@@ -6,7 +6,8 @@ class Battle_field:
         self.attack_active = True
 
     def run_game(self):
-
+        if self.run_game == self.welcome:
+            print("Start!")
 
         def display_welcome(self):
             self.welcome = "Welcome to the battlefield, the game will begin!"
