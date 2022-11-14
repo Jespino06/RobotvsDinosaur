@@ -24,19 +24,30 @@ class Battlefield:
         self.dinosaur.attack(self.robot)
         print("T-rex Bo is on the loose!!!")
         self.robot.attack(self.dinosaur)
-        print('OB1 shoots the laser gun at T-rex Bo!!!')
+        print('OB1 is ruthless!!!')
 
     
     def display_winner(self):
-        while self.robot.health <= 100:
-            continue
-        if self.robot.health == 0:
-            print(f'Game over!!! The winner is...{self.robot.name}!')
+        cannot_survive = True
+        
+        while cannot_survive == True:
+            if self.robot.health == 100:
+                cannot_survive = False
+                print(f'Game over!!! The winner is...{self.robot.name}!')
+            else:
+                print()
+                self.robot.health -= 20
             
-        while self.dinosaur.health <= 100:
-            continue
-        if self.dinosaur.health == 0:
-            print(f'Game over!!! The winner is...{self.dinosaur.name}!')
+        while cannot_survive == True:
+            if self.dinosaur.health == 100:
+                cannot_survive = False
+                print(f'Game over!!! The winner is...{self.dinosaur.name}!')
+            else:
+                print()
+                self.dinosaur.health -= 40
+            
+            
+                
             
 
        

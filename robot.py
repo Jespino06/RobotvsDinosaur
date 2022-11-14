@@ -23,5 +23,5 @@ class Robot:
         self.dinosaur = dinosaur
         dinosaur.health -= 40
         self.active_weapon = 25
-        print(f'OB1 attacks T-rex Bo: {dinosaur.health} percent health left!!!')
+        print(f'OB1 shoots the laser gun at T-rex Bo: {dinosaur.health} percent health left!!!')
         pass
