@@ -3,7 +3,7 @@ from dinosaur import Dinosaur
 
 
 
-class Battle_field:
+class Battlefield:
     def __init__(self):
         self.robot = Robot('OB1')
         self.dinosaur = Dinosaur('t-rex', 6)
@@ -21,18 +21,23 @@ class Battle_field:
     
 
     def battle_phase(self):
-        Dinosaur.attack()
-        print("T-rex Bo attacks Robot!!!")
-        Robot.attack('T-rex Bo')
+        self.dinosaur.attack(self.robot)
+        print("T-rex Bo is on the loose!!!")
+        self.robot.attack(self.dinosaur)
         print('OB1 shoots the laser gun at T-rex Bo!!!')
 
     
     def display_winner(self):
-        self.health = Robot(self.health), Dinosaur(self.health)
-        while self.health <= 100:
-            print('Finish him!')
-        if self.health == 0:
-            print('Game over!!! The winner is...')
+        while self.robot.health <= 100:
+            continue
+        if self.robot.health == 0:
+            print(f'Game over!!! The winner is...{self.robot.name}!')
+            
+        while self.dinosaur.health <= 100:
+            continue
+        if self.dinosaur.health == 0:
+            print(f'Game over!!! The winner is...{self.dinosaur.name}!')
+            
 
        
        
@@ -50,15 +55,6 @@ class Battle_field:
         # pass
 
     
-        
-            
-        
-        
-        
-        
-        
-        
-        
         
         # if self.health == 0:
         #     print('Game over!')
