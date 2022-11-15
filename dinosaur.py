@@ -7,7 +7,7 @@ class Dinosaur:
 
     def attack(self, robot):
         self.robot = robot
-        robot.health -= 20
+        robot.health -= 10
         self.attack_power = 6
         print(f'T-rex Bo attacks Robot: {robot.health} percent health left!!!')
         pass
