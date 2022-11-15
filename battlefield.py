@@ -5,8 +5,8 @@ from dinosaur import Dinosaur
 
 class Battlefield:
     def __init__(self):
-        self.robot = Robot('OB1')
-        self.dinosaur = Dinosaur('T-rex', 6)
+        self.robot = Robot('Yeti-2D')
+        self.dinosaur = Dinosaur('Roxette Rex', 6)
         pass
 
     def run_game(self):
@@ -22,9 +22,9 @@ class Battlefield:
 
     def battle_phase(self):
         self.dinosaur.attack(self.robot)
-        print("T-rex Bo is on the loose!!!")
+        print("Roxette Rex is on the loose!!!")
         self.robot.attack(self.dinosaur)
-        print('OB1 is ruthless!!!')
+        print('Yeti-2D is ruthless!!!')
 
     
     def display_winner(self):
@@ -38,10 +38,10 @@ class Battlefield:
                 cannot_survive = False
                 print(f'Game over!!! The winner is...{self.robot.name}!')
             elif self.dinosaur.health and self.robot.health < 100:
-                print('T-rex attacks Bo again!!! ')
+                print('Roxette Rex attacks Yeti-2D again!!! ')
                 self.robot.health -= 10
                 print(self.robot.health)
-                print('OB1, shoots at T-rex Bo again!!!')
+                print('Yeti-2D, shoots at Roxette Rex again!!!')
                 self.dinosaur.health -= 20
                 print(self.dinosaur.health)
                 continue
